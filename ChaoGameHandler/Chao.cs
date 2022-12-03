@@ -104,9 +104,35 @@ namespace ChaoGameHandler
             LessonsByte = CreateLessons(inputLessons);
         }
 
-        public Chao(byte[] name, byte[] levels, byte[] stats, byte[] lessons, byte[] alignment)
+        public Chao(byte[] name, byte[] basics, byte[] life, byte[] animalBehaviours, byte[] toys,
+            byte[] type, byte[] runPower, byte[] swimFly, byte[] transMag, byte[] statsBar, byte[] statsGrade,
+            byte[] breed, byte[] accessories, byte[] bodyShape, byte[] animalParts, byte[] dNAGrade,
+            byte[] dNAPersonality, byte[] dNAAppearance, byte[] characterBond, byte[] standardEmotion, byte[] aniBehaviours,
+            byte[] health, byte[] personality, byte[] levels, byte[] stats, byte[] lessons, byte[] alignment)
         {
             NameByte = name;
+            BasicsByte = basics;
+            LifeByte = life;
+            AnimalBehavioursByte = animalBehaviours;
+            ToysByte = toys;
+            TypeByte = type;
+            RunPowerByte = runPower;
+            SwimFlyByte = swimFly;
+            TransformationMagnitudeByte = transMag;
+            StatsBarByte = statsBar;
+            StatsGradeByte = statsGrade;
+            BreedByte = breed;
+            AccessoriesByte = accessories;
+            BodyShapeByte = bodyShape;
+            AnimalPartsByte = animalParts;
+            DNAGradeByte = dNAGrade;
+            DNAPersonalityByte = dNAPersonality;
+            DNAAppearanceByte = dNAAppearance;
+            CharacterBondsByte = characterBond;
+            StandardEmotionsByte = standardEmotion;
+            AnimatedBehavioursByte = aniBehaviours;
+            HealthByte = health;
+            PersonalityByte = personality;
             LevelsByte = levels;
             StatsByte = stats;
             LessonsByte = lessons;

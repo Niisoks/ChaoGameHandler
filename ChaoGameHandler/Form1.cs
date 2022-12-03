@@ -62,9 +62,18 @@ namespace ChaoGameHandler
             {
                 string[] words = importTxt.Text.Split('-');
                 if(words.Length > 3 && IsBase64String(words[0]) && IsBase64String(words[1]) && IsBase64String(words[2])) { 
-                    Chao importChao = new Chao(Convert.FromBase64String(words[0]), Convert.FromBase64String(words[1]), Convert.FromBase64String(words[2]), Convert.FromBase64String(words[3]), Convert.FromBase64String(words[4]));
+                    Chao importChao = new Chao(
+                        Convert.FromBase64String(words[0]), Convert.FromBase64String(words[1]), Convert.FromBase64String(words[2])
+                        , Convert.FromBase64String(words[3]), Convert.FromBase64String(words[4]), Convert.FromBase64String(words[5])
+                        , Convert.FromBase64String(words[6]), Convert.FromBase64String(words[7]), Convert.FromBase64String(words[8])
+                        , Convert.FromBase64String(words[9]), Convert.FromBase64String(words[10]), Convert.FromBase64String(words[11])
+                        , Convert.FromBase64String(words[12]), Convert.FromBase64String(words[13]), Convert.FromBase64String(words[14])
+                        , Convert.FromBase64String(words[15]), Convert.FromBase64String(words[16]), Convert.FromBase64String(words[17])
+                        , Convert.FromBase64String(words[18]), Convert.FromBase64String(words[19]), Convert.FromBase64String(words[20])
+                        , Convert.FromBase64String(words[21]), Convert.FromBase64String(words[22]), Convert.FromBase64String(words[23])
+                        , Convert.FromBase64String(words[24]), Convert.FromBase64String(words[25]), Convert.FromBase64String(words[26]));
                     chaoLabel.Text = importChao.ToString();
-                    Program.WriteHex(0x3ab6, 0x3c08, directory, importChao);
+                    Program.WriteHex(0x3aa4, directory, importChao);
                     Program.LaunchCommandLineApp(directory);
                 }
                 else { MessageBox.Show("Incorrect code, did you copy it correctly?"); }
