@@ -81,7 +81,7 @@ namespace ChaoGameHandler
                             locationLif++;
                             break;
                         //Learnt abilities - animalbehaviours + classroom skills + toys
-                        case var _ when (curLocation >= offset + 280 && curLocation <= offset + 281):
+                        case var _ when (curLocation >= offset + 280 && curLocation <= offset + 282):
                             if (locationAnB == 0) { bw.Seek(curLocation, SeekOrigin.Begin); }
                             bw.Write(chao.AnimalBehavioursByte[locationAnB]);
                             locationAnB++;
@@ -150,7 +150,7 @@ namespace ChaoGameHandler
                             locationLvl++;
                             break;
                         //stat number
-                        case var _ when (curLocation >= offset + 56 && curLocation <= offset + 65):
+                        case var _ when (curLocation >= offset + 56 && curLocation <= offset + 69):
                             if (locationSta == 0) { bw.Seek(curLocation, SeekOrigin.Begin); }
                             bw.Write(chao.StatsByte[locationSta]);
                             locationSta++;

@@ -144,7 +144,7 @@ namespace ChaoGameHandler
             byte[] newNameByte = new byte[7];
             byte[] newBasicsByte = new byte[2];
             byte[] newLifeByte = new byte[6];
-            byte[] newAnimalBehaviourByte = new byte[2];
+            byte[] newAnimalBehaviourByte = new byte[3];
             byte[] newToysByte = new byte[2];
             byte[] newTypeByte = new byte[1];
             byte[] newRunPowerByte = new byte[4];
@@ -165,7 +165,7 @@ namespace ChaoGameHandler
             byte[] newHealthByte = new byte[6];
             byte[] newPersonalityByte = new byte[6];
             byte[] newLevelsByte = new byte[7];
-            byte[] newStatsByte = new byte[10];
+            byte[] newStatsByte = new byte[14];
             byte[] newLessonsByte = new byte[4];
             byte[] newAlignmentByte = new byte[4];
 
@@ -205,7 +205,7 @@ namespace ChaoGameHandler
                             locationLif++;
                             break;
                         //Learnt abilities - animalbehaviours + classroom skills + toys
-                        case var _ when (curLocation >= offset + 280 && curLocation <= offset + 281):
+                        case var _ when (curLocation >= offset + 280 && curLocation <= offset + 282):
                             newAnimalBehaviourByte[locationAnB] = (byte)curRead;
                             locationAnB++;
                             break;
@@ -262,7 +262,7 @@ namespace ChaoGameHandler
                             locationLvl++;
                             break;
                         //stat number
-                        case var _ when (curLocation >= offset+56 && curLocation <= offset+65):
+                        case var _ when (curLocation >= offset+56 && curLocation <= offset+69):
                             newStatsByte[locationSta] = (byte)curRead;
                             locationSta++;
                             break;
