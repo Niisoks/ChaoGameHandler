@@ -16,21 +16,6 @@ namespace ChaoGameHandler
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            //Chao newChao2 = new Chao("CUNTFAGGOT", new int[] { 15, 55, 35, 66, 88, 40, 65 }, new int[] { 132, 204, 360, 410, 553 }, "00011111000000000000000000000111");
-            //WriteHex(0x3ab6, 0x3c08, directory, newChao2);
-            //LaunchCommandLineApp(directory);
-            //MessageBox.Show(newChao2.ToString());
-
-            //Chao oldChao = new Chao(0x3ab6, 0x3ae5, args[0]);
-            //Password oldChaoPass = new Password(oldChao);
-            //QRCodeWriter.CreateQrCode(oldChaoPass.Pass, 500, QRCodeWriter.QrErrorCorrectionLevel.Medium).SaveAsPng("MyQR.png");
-
-            //Password newChao = new Password(Console.ReadLine());
-            ////Console.Write(newChao.PassChao);
-            ////Console.Write(oldChao);
-            ////Console.Write(newChao2);
-            //WriteHex(0x3ab6, 0x3ae5, args[0], newChao.PassChao);
-            //LaunchCommandLineApp(args[0]);
         }
 
         public static void WriteHex(int offset, string dir, Chao chao)
@@ -272,8 +257,6 @@ namespace ChaoGameHandler
 
         public static void LaunchCommandLineApp(string args)
         {
-            //Chao newChao2 = new Chao("PISSBABY", new int[] { 15, 55, 35, 66, 88, 40, 65 }, new int[] { 132, 204, 360, 410, 553 });
-            // For the example
             string hashfixer = "SA2HashFix.exe";
             //Process.Start(hashfixer, args);
             HashFix.Main(args);
